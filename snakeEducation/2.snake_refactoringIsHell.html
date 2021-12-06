@@ -1,0 +1,31 @@
+REFAKTORING - nefunguje !!!!!
+
+            //loop
+            function gameLoop() {
+                drawStuff();
+                moveStaff();
+                requestAnimationFrame(gameLoop);     
+            }
+
+            gameLoop();
+
+            //MOVE everything
+            function moveStaff(){
+                snakePosX += snakeSpeed;
+
+                if (snakePosX > canvas.width) {
+                    snakePosX = 0;
+                }
+            }
+
+            //DRAW everything
+            /function drawStuff(){
+                rectangle('white', 0, 0, canvas.width, canvas.height);
+                rectangle('black', snakePosX, snakePosY, snakeSize, snakeSize)
+            }
+
+            //DRAW rectangle
+            function rectangle(color, x, y, width, height) {
+                ctx.fillStyle = color;
+                ctx.fillRect(color, x, y, width, height);
+            }
