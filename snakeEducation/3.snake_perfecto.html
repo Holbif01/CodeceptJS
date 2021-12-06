@@ -65,14 +65,14 @@
 			let snakeLength = 4;
 
 			// food
-			let foodPosX = 0;gi
+			let foodPosX = 0;
 			let foodPosY = 0;
 
 			// loop
 			function gameLoop() {
 				if (gameIsRunning) {
 					drawStuff();
-					/*moveStuff();*/
+					moveStuff();
 					setTimeout(gameLoop, 1000 / fps);
 				}
 			}
