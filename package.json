@@ -4,13 +4,16 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "alzaSearch": "codeceptjs run --config=codecept.conf.js --debug",
+    "autocompetion": "npx codeceptjs def --config codecept.conf.js "
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
     "codeceptjs": "^3.2.2",
+    "codeceptjs-assert": "0.0.5",
     "playwright": "^1.17.0"
   }
 }

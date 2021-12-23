@@ -15,7 +15,7 @@ Scenario('hledani Harryho', ({ I, HomePage }) => {
 });
 
 
-Scenario('hledani svateho gralu', ({ I }) => {
+Scenario.only('hledani svateho gralu', ({ I }) => {
     I.amOnPage('https://www.alza.cz/');
     I.click('#edtSearch') 
     I.fillField( '#edtSearch', 'indiana jones')
@@ -26,7 +26,7 @@ Scenario('hledani svateho gralu', ({ I }) => {
 
 
 
-Scenario('kontrola objednavky', ({ I, MyOrdersPage }) => {
+Scenario.only('kontrola objednavky', ({ I, MyOrdersPage }) => {
   I.amOnPage('https://www.alza.cz/muj-ucet/objednavky.htm');
   I.seeElement(MyOrdersPage.inputs.search) 
   I.seeElement(MyOrdersPage.buttons.checkState)
@@ -44,12 +44,26 @@ Scenario('Hledani Pottera s metodou', ({ HomePage }) => {
    
   })
 
-  
 
-  Scenario.only('Hledani Pottera s metodou2', ({ HomePage }) => {
+  
+  Scenario('Hledani Pottera s metodou2', ({ HomePage }) => {
     HomePage.search('Harry Potter', 'Vyhledáno: Harry Potter')
     
    }).tag('@HP')
+
+
+
+
+
+
+   
+   
  
 
+   
+
+
+
+
+   
 

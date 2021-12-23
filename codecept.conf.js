@@ -12,6 +12,9 @@ exports.config = {
       url: 'http://localhost',
       show: true,
       browser: 'chromium'
+    }, 
+    AssertWrapper: {
+      "require": "codeceptjs-assert"
     }
   },
   include: {
@@ -24,6 +27,11 @@ exports.config = {
     pauseOnFail: {},
     retryFailedStep: {
       enabled: true
+    },
+    customLocator: {
+      enabled: true,
+      prefix: '$',
+      attribute: 'data-dot'
     },
     tryTo: {
       enabled: true
