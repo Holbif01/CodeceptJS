@@ -31,7 +31,7 @@ exports.config = {
     customLocator: {
       enabled: true,
       prefix: '$',
-      attribute: 'data-dot'
+      attribute: 'data-recording-gdpr-safe'
     },
     tryTo: {
       enabled: true

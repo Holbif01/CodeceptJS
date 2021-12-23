@@ -1,8 +1,8 @@
 
 
-Feature('Alza Search');
+Feature('Alza Search-domaci ukol-locator');
 
-Scenario('hledani Harryho', ({ I, HomePage }) => {
+/*Scenario('hledani Harryho', ({ I, HomePage }) => {
   const harryPotter = 'Harry Potter'  
   const assertion = 'Vyhledáno: Harry Potter'
     
@@ -14,19 +14,22 @@ Scenario('hledani Harryho', ({ I, HomePage }) => {
 
 });
 
-
-Scenario.only('hledani svateho gralu', ({ I }) => {
+*/
+Scenario('customLocator', ({ I }) => {
     I.amOnPage('https://www.alza.cz/');
     I.click('#edtSearch') 
-    I.fillField( '#edtSearch', 'indiana jones')
+    I.fillField( '#edtSearch', 'Počítače')
     I.click('#btnSearch')
-    I.see('Vyhledáno: indiana jones')
+    I.see('Počítače')
+    I.click('$recording-gdpr-safe')//'data-recording-gdpr-safe'
+    I.fillField( '#edtSearch', 'Notebooky')
+    I.see('Notebooky')
 
 });
 
 
-
-Scenario.only('kontrola objednavky', ({ I, MyOrdersPage }) => {
+/*
+Scenario('kontrola objednavky', ({ I, MyOrdersPage }) => {
   I.amOnPage('https://www.alza.cz/muj-ucet/objednavky.htm');
   I.seeElement(MyOrdersPage.inputs.search) 
   I.seeElement(MyOrdersPage.buttons.checkState)
@@ -49,13 +52,12 @@ Scenario('Hledani Pottera s metodou', ({ HomePage }) => {
   Scenario('Hledani Pottera s metodou2', ({ HomePage }) => {
     HomePage.search('Harry Potter', 'Vyhledáno: Harry Potter')
     
-   }).tag('@HP')
+   });
+  
 
+   
 
-
-
-
-
+*/
    
    
  
